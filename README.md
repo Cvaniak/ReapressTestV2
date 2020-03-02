@@ -142,13 +142,13 @@ And add Travis file:
       provider: heroku
       api_key:
         secure: "EncryptedAPIKey"
-        app: guarded-savannah-67167
+        app: herokuNameAPp
       on:
-        repo: Cvaniak/ReapressTest
+        repo: NickFromGit/RepoName
     script:
     - echo "skipping tests"
 ```
-in `EncryptedAPIKey` change it for Encrypted APIKey :p  
+in `EncryptedAPIKey` change it for Encrypted APIKey (also change app and repo) :p  
 for that in command line `travis encrypt $(heroku auth:token)`  
 there may be some errors but should work with them
 
