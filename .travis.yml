@@ -10,6 +10,6 @@ deploy:
     secure: "P2O1bZMyHGyDTDZfo8n76abNQISwRi5fVhSesPsgYZuNkXJCp2DMvtv3Z6u475DoHRbYQSbcf6bjsaepsg0x/vW0j7oag2rVwwBZwRGeZQ/kXykyPVlB8OAJcjb/jBTUO/p2JFs1Ej4QW7fS/+irG3i/NbIMNaryEFLauAxc5j5bR1Xh/XHmrGmnTMjfqyonJjYEy0lNw+MX33kIXdx4utvyg1rUheLtk138qRJZf6/oF7d8wIzO4KmJsRaiFZBt3swSdNHzzQGkS36gV13rHpM/iP3GFs6z01oGfU1c1QbwNnfcfAx12D4LzAUtUoKn72LIV+oC+YGMogXFAsBPpaoDOfQ/A2ppwxBkLeTctRy/mZRBnNd7wHCPsr+mRSyn/RcHYE0jcDn7+QqxCNI6XiBKUbJVuUAjs3aOE6SXo7EYoypumRUMmQH2tSohgZhSylbex5dHPbQpTfmdjX9d2pab1aTp1aAGHEJy8IWunhUbUDQi+snrzg/beKqbHvkm7S2JcHNi/6TTCzi3rvv8LgE/3QR0qPgN7lPJHhNHdAmHDHUqJnGamOvU5Mfe4IiF1IfhWAMCbPGzFRmbhgCHoSbUq+Hpsa76c9MJWPNBG1olM19mM6S/EMkwLcw48XDqCmrMn0cocXfB+7M5L7jorgLTixaDODU8ZEEcOqoutX0="
     app: guarded-savannah-67167
   on:
-    repo: Cvaniak/ReapressTest
+    repo: Cvaniak/ReapressTestV2
 script:
 - echo "skipping tests"
