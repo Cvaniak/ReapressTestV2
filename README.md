@@ -1,11 +1,12 @@
-npx create-react-app client
+`npx create-react-app client`
 
-npm init
-    enters
+`npm init`
+  enters
 
-npm install express --save
+`npm install express --save`
 
-create server.js
+create `server.js`
+```js
     const express = require('express');
     const app = express();
     const port = process.env.PORT || 5000;
@@ -28,11 +29,14 @@ create server.js
         res.sendFile(path.resolve(\__dirname, 'client', 'build', 'index.html'));
       });
     }
-
-add in client/package.json below "scripts":{"cos tam"}
+```
+add in `client/package.json` below `"scripts":{"cos tam"}`
+```js
   "proxy": "http://localhost:5000/"
+```
 
-in client/scr/App.js change code to:
+in `client/scr/App.js` change code to:
+``` js
     import React, { Component } from 'react';
     import logo from './logo.svg';
     import './App.css';
@@ -73,23 +77,25 @@ in client/scr/App.js change code to:
     }
 
     export default App;
-
-open two terminals: one in main directory and type 'node ./server.js' on second
-go too /client and type 'npm start'
+```
+open two terminals: one in main directory and type `node ./server.js` on second
+go too /client and type `npm start`
 
 That build should work on localhost:3000
 
-better way is too install nodemon "npm install nodemon" and start with 'nodemon ./server.js'
+better way is too install nodemon `npm install nodemon` and start with `nodemon ./server.js`
 
 Befor adding git - delete .git from /client and make sure that .gitignore ignores node_module
 
 Now add git:
     create new repo on github
+``` bash
     git init
     git add .
     git commit -m "first commit"
     git remote add origin 'name of repo'
     git push origin master
+```
 Must be something on Github before next step!
 
 Now Heroku and Travis:
@@ -97,12 +103,15 @@ Now Heroku and Travis:
     follow this (step 3 and 4)[note that on github its in section webhooks | if there is no your repo in travis - refreash in left upper corner] https://medium.com/@felipeluizsoares/automatically-deploy-with-travis-ci-and-heroku-ddba1361647f
 
 After that login to Heroku:
+```bash
     heroku login
     heroku git:remote -a "herokuAppName"
+```
 
 And add Travis file:
   in main directory create .travis.yml
   with:
+``` yml
     language: node_js
     node_js:
     - stable
@@ -118,6 +127,7 @@ And add Travis file:
         repo: Cvaniak/ReapressTest
     script:
     - echo "skipping tests"
-in "EncryptedAPIKey" change it for Encrypted APIKey :p
-for that in command line 'travis encrypt $(heroku auth:token)'
+```
+in `EncryptedAPIKey` change it for Encrypted APIKey :p
+for that in command line `travis encrypt $(heroku auth:token)`
 there may be some errors but should work with them
