@@ -85,6 +85,8 @@ That build should work on localhost:3000
 
 better way is too install nodemon `npm install nodemon` and start with `nodemon ./server.js`
 
+***
+
 Befor adding git - delete .git from /client and make sure that .gitignore ignores node_module
 
 Now add git:
@@ -128,6 +130,9 @@ And add Travis file:
     script:
     - echo "skipping tests"
 ```
-in `EncryptedAPIKey` change it for Encrypted APIKey :p
-for that in command line `travis encrypt $(heroku auth:token)`
+in `EncryptedAPIKey` change it for Encrypted APIKey :p  
+for that in command line `travis encrypt $(heroku auth:token)`  
 there may be some errors but should work with them
+
+***
+If any error on heroku use `heroku logs --tail`
