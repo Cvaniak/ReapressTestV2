@@ -93,7 +93,31 @@ Now add git:
 Must be something on Github before next step!
 
 Now Heroku and Travis:
-
+    Heroku and Travis connection with Github:
     follow this (step 3 and 4)[note that on github its in section webhooks | if there is no your repo in travis - refreash in left upper corner] https://medium.com/@felipeluizsoares/automatically-deploy-with-travis-ci-and-heroku-ddba1361647f
 
-After that
+After that login to Heroku:
+    heroku login
+    heroku git:remote -a "herokuAppName"
+
+And add Travis file:
+  in main directory create .travis.yml
+  with:
+    language: node_js
+    node_js:
+    - stable
+    cache:
+      directories:
+      - node_modules
+    deploy:
+      provider: heroku
+      api_key:
+        secure: "EncryptedAPIKey"
+        app: guarded-savannah-67167
+      on:
+        repo: Cvaniak/ReapressTest
+    script:
+    - echo "skipping tests"
+in "EncryptedAPIKey" change it for Encrypted APIKey :p
+for that in command line 'travis encrypt $(heroku auth:token)'
+there may be some errors but should work with them
