@@ -1,3 +1,7 @@
+https://reapresstestv2.herokuapp.com/
+
+***
+
 `npx create-react-app client`
 
 `npm init`
@@ -88,6 +92,20 @@ better way is too install nodemon `npm install nodemon` and start with `nodemon 
 ***
 
 Befor adding git - delete .git from /client and make sure that .gitignore ignores node_module
+
+THE MOST IMPORTANT in main directory `package.json`
+``` json
+  "scripts": {
+    "test": "echo \"Error: no test specified",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+```
+
 
 Now add git:
     create new repo on github
