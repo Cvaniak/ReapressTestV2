@@ -85,7 +85,7 @@ in `client/scr/App.js` change code to:
 open two terminals: one in main directory and type `node ./server.js` on second
 go too /client and type `npm start`
 
-That build should work on localhost:3000
+That build should work on localhost:3000 
 
 better way is too install nodemon `npm install nodemon` and start with `nodemon ./server.js`
 
