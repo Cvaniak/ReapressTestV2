@@ -13,4 +13,4 @@ deploy:
     repo: Cvaniak/ReapressTestV2
     branch: master
 script:
-- echo "skipping tests"
+- echo "skipping tests "
