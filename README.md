@@ -93,4 +93,7 @@ Now add git:
 Must be something on Github before next step!
 
 Now Heroku and Travis:
-    follow this (step 3 and 4)[note that on github its in section ] https://medium.com/@felipeluizsoares/automatically-deploy-with-travis-ci-and-heroku-ddba1361647f
+
+    follow this (step 3 and 4)[note that on github its in section webhooks | if there is no your repo in travis - refreash in left upper corner] https://medium.com/@felipeluizsoares/automatically-deploy-with-travis-ci-and-heroku-ddba1361647f
+
+After that
